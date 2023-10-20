@@ -1,26 +1,29 @@
 import { useContext } from "react";
 import { BasicContext } from "../context/BasicContext";
-import { useTranslation } from 'react-i18next';
+import ChooseRole from "./ChooseRole";
+import Card from "./Card";
+import DeckBar from "./DeckBar";
+import AddCardIdea from "./AddCardIdea";
+import Languages from "./Languages";
+import Intro from "./Intro";
 
 const Home = () => {
-    const { counter, setCounter } = useContext(BasicContext);
-    const { t, i18n } = useTranslation();
-
+    const { counter, setCounter, isIntroRenderedState } = useContext(BasicContext);
     const increase = () => {
         setCounter(counter+1);
     };
 
-    const changeToFrench = () => {
-        i18n.changeLanguage('fr');
-    };
-
     return (
         <div>
-            <p>{t('keyPurchaseTablesText')}</p>
-            Home
+            <Intro />
+            <ChooseRole />
+            <Card />
+            <DeckBar />
+            <AddCardIdea />
+            <Languages />
+            
             {counter}
             <button onClick={increase}> + </button>
-            <button onClick={changeToFrench}>Switch to French</button>
         </div>
     )
 }

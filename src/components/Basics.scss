@@ -1,0 +1,94 @@
+body {
+    background-color: lightblue;
+}
+
+.choose_role {
+    background-color: green;
+    min-height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    width: 25vw;
+    height: 5vw;
+    border-radius: 1vw;
+    background-color: blueviolet;
+    transition: background-color 0.3s, box-shadow 0.3s; // Add a transition for smoother effects
+    position: relative; // Add relative positioning
+    cursor: pointer;
+    overflow: hidden; // Ensure the border radius clips the line
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        width: 40%; // Adjust as needed for dense packing
+        height: 10vw; // Increase height for phone screens
+        margin: 5px; // Add margin for spacing between buttons
+    }
+
+    &:hover {
+        background-color: lighten(blueviolet, 10%); // Make the color lighter on hover
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Add a shadow on hover
+    }
+
+    &:active {
+        background-color: darken(blueviolet, 10%); // Make the color darker on click
+        box-shadow: none; // Remove the shadow on click
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px; // Adjust to match the desired thickness (5px or 0.5vw)
+        height: 5px; // Adjust to match the desired thickness (5px or 0.5vw)
+        background-color: rgba(0, 0, 0, 0.2); // Shadow color
+        border-radius: 1vw; // Match the button's border radius
+        transition: height 0.3s; // Add a transition for the line
+    }
+
+    &:active::before {
+        height: 0; // Make the line disappear on click
+    }
+}
+
+
+.card {
+    max-width: 500px;
+    width: 80vw;
+    height: calc(80vw * 1.5);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 3vw;
+    text-align: center;
+    max-height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    @media (min-width: 768px) {
+      width: 500px;
+      height: calc(500px * 1.5);
+    }
+  
+    p {
+      margin: 0;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+}
+  
