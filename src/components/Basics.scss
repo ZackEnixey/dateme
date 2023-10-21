@@ -135,5 +135,15 @@ $bottom_secion_height: 200px;
     .card_front {
         max-width: 500px;
         height: 100%;
+        font-size: 3vh;
     }
+}
+
+.role_selected {
+    background-color: black;
+    color: white;
+}
+
+.role_selected:hover {
+    background-color: gray;
 }

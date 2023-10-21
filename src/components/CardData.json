@@ -1,0 +1,77 @@
+{
+    "master": [
+        {
+            "id": 1,
+            "textPlace": "Club in downtown Belgrade, where rich people go test text test text one two three",
+            "textDificulty": "You have only 5 euros in your pocket, random text to be rendered test text test text one two three"
+        },
+        {
+            "id": 2,
+            "textPlace": "The Club in downtown Belgrade, where rich people go test text test text one two three",
+            "textDificulty": "Ok, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+        
+        },
+        {
+            "id": 3,
+            "textPlace": "33 Club in downtown Belgrade, where rich people go test text test text one two three",
+            "textDificulty": "333, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+        
+        },
+        {
+            "id": 4,
+            "textPlace": "444 Club in downtown Belgrade, where rich people go test text test text one two three",
+            "textDificulty": "4444, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+        
+        },
+        {
+            "id": 5,
+            "textPlace": "The 5555 in downtown Belgrade, where rich people go test text test text one two three",
+            "textDificulty": "55555, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+        }
+    ],
+    "seducer": [
+        {
+            "id": 1,
+            "textPlace": "Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 2,
+            "textPlace": "The Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 3,
+            "textPlace": "33 Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 4,
+            "textPlace": "444 Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 5,
+            "textPlace": "The 5555 in downtown Belgrade, where rich people go test text test text one two three"
+        }
+    ],
+    "catch": [
+        {
+            "id": 1,
+            "textPlace": "Catch Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 2,
+            "textPlace": "Catch The Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 3,
+            "textPlace": "Catch 33 Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 4,
+            "textPlace": "Catch 444 Club in downtown Belgrade, where rich people go test text test text one two three"
+        },
+        {
+            "id": 5,
+            "textPlace": "Catch The 5555 in downtown Belgrade, where rich people go test text test text one two three"
+        }
+    ]
+}
+  

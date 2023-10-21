@@ -1,26 +1,48 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import cardData from "./CardData.json";
+import { PLAYER_ROLE } from '../enums/PlayerRoles';
+import { BasicContext } from '../context/BasicContext';
+import { PlayerData, PlayerEntry } from '../interfaces/Interfaces';
 
 const Card = () => {
-    const cardTextSource = [
-        {
-            id: 45,
-            textPlace: "Club in downtown Belgrade, where rich people go test text test text one two three",
-            textDificulty: "You have only 5 euros in your pocket, random text to be rendered test text test text one two three"
-        },
-        {
-            id: 46,
-            textPlace: "The Club in downtown Belgrade, where rich people go test text test text one two three",
-            textDificulty: "Ok, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
-        }
-    ]
+    const { currentRole, locationCardNo, environmentCardNo, seducerCardNo, catchNo } = useContext(BasicContext);
+    let localCardData: PlayerData = cardData;
+    let cardContentData: PlayerEntry[] | undefined = localCardData.catch;
+    if (!cardContentData) return null;
+
+    if (currentRole === PLAYER_ROLE.MASTER) {
+        cardContentData = localCardData.master;
+        if (!cardContentData) return null;
+
+        return (
+            <div className='middle-section'>
+                <div className="card_front">
+                    {cardContentData[locationCardNo].textPlace}
+                </div>
+                <div className="card_front">
+                    {cardContentData[environmentCardNo]?.textDificulty}
+                </div>
+            </div>
+        )
+    }
+   
+    if (currentRole === PLAYER_ROLE.SEDUCER) {
+        cardContentData = localCardData.seducer;
+        if (!cardContentData) return null;
+
+        return (
+            <div className='middle-section'>
+                <div className="card_front">
+                    {cardContentData[seducerCardNo].textPlace}
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className='middle-section'>
             <div className="card_front">
-                {cardTextSource[1].textPlace}
-            </div>
-            <div className="card_front">
-                {cardTextSource[1].textDificulty}
+                {cardContentData[catchNo].textPlace}
             </div>
         </div>
     )

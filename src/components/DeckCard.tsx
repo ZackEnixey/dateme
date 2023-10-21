@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
-const DeckCard = () => {
+interface IDeckCard {
+    dragCard(randomNumber: number): void;
+    noCardsInDeck: number;
+}
+
+const DeckCard: FC<IDeckCard> = ({ dragCard, noCardsInDeck }) => {
     const [firstCardDownClass, setFirstCardDownClass] = useState('card down');
 
     const simulateDragging = () => {
         setFirstCardDownClass('card temporary-class');
+        const randomNum = Math.floor(Math.random() * noCardsInDeck);
+        dragCard(randomNum)
 
         setTimeout(() => {
             setFirstCardDownClass('card first_card');
