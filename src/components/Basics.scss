@@ -1,5 +1,14 @@
-body {
+body, html {
     background-color: lightblue;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    overflow: hidden;
 }
 
 .choose_role {
@@ -12,31 +21,31 @@ body {
 
 .button {
     width: 25vw;
-    height: 5vw;
+    height: 80%;
     border-radius: 1vw;
     background-color: blueviolet;
-    transition: background-color 0.3s, box-shadow 0.3s; // Add a transition for smoother effects
-    position: relative; // Add relative positioning
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
     cursor: pointer;
-    overflow: hidden; // Ensure the border radius clips the line
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media (max-width: 768px) {
-        width: 40%; // Adjust as needed for dense packing
-        height: 10vw; // Increase height for phone screens
-        margin: 5px; // Add margin for spacing between buttons
+        width: 40%;
+        height: 80%;
+        margin: 5px; 
     }
 
     &:hover {
-        background-color: lighten(blueviolet, 10%); // Make the color lighter on hover
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Add a shadow on hover
+        background-color: lighten(blueviolet, 10%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     &:active {
-        background-color: darken(blueviolet, 10%); // Make the color darker on click
-        box-shadow: none; // Remove the shadow on click
+        background-color: darken(blueviolet, 10%);
+        box-shadow: none;
     }
 
     &::before {
@@ -44,23 +53,23 @@ body {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -5px; // Adjust to match the desired thickness (5px or 0.5vw)
-        height: 5px; // Adjust to match the desired thickness (5px or 0.5vw)
-        background-color: rgba(0, 0, 0, 0.2); // Shadow color
-        border-radius: 1vw; // Match the button's border radius
-        transition: height 0.3s; // Add a transition for the line
+        bottom: -5px;
+        height: 5px;
+        background-color: rgba(0, 0, 0, 0.2); 
+        border-radius: 1vw;
+        transition: height 0.3s;
     }
 
     &:active::before {
-        height: 0; // Make the line disappear on click
+        height: 0;
     }
 }
 
 
-.card {
+.card_front {
     max-width: 500px;
     width: 80vw;
-    height: calc(80vw * 1.5);
+    height: 45%;
     background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -73,15 +82,6 @@ body {
     font-size: 3vw;
     text-align: center;
     max-height: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-    @media (min-width: 768px) {
-      width: 500px;
-      height: calc(500px * 1.5);
-    }
   
     p {
       margin: 0;
@@ -91,4 +91,49 @@ body {
       white-space: nowrap;
     }
 }
-  
+
+.top-section {
+    height: 80px;
+    background-color: #f0f0f0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+$bottom_secion_height: 200px;
+
+.middle-section {
+    position: absolute;
+    top: 80px; 
+    bottom: $bottom_secion_height; 
+    width: 100%;
+    overflow-y: auto; 
+    background-color: #e0e0e0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-section {
+    position: absolute;
+    bottom: 0;
+    height: $bottom_secion_height;
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Media query for non-mobile screens */
+@media screen and (min-width: 768px) {
+    .middle-section {
+        flex-direction: row
+    }
+    .card_front {
+        max-width: 500px;
+        height: 100%;
+    }
+}

@@ -14,8 +14,8 @@ const Home = () => {
     };
 
     return (
-        <div>
-            <Intro />
+        <div className="wrapper">
+            {/* <Intro /> */}
             <ChooseRole />
             <Card />
             <DeckBar />

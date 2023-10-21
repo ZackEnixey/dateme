@@ -1,9 +1,11 @@
-import React from 'react'
+import DeckCard from './DeckCard';
 
 const DeckBar = () => {
+
     return (
-        <div>
-            Deck bar
+        <div className='bottom-section'>
+            <DeckCard />
+            <DeckCard />
         </div>
     )
 }

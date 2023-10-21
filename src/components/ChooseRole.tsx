@@ -2,10 +2,10 @@ import React from 'react'
 
 const ChooseRole = () => {
     return (
-        <div className='choose_role'>
-            <div className='button'> A </div>
-            <div className='button'> B </div>
-            <div className='button'> C </div>
+        <div className='top-section'>
+            <div className='button'> Game Master </div>
+            <div className='button'> Seducer </div>
+            <div className='button'> Catch </div>
         </div>
     )
 }
