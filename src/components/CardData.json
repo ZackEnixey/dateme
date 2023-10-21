@@ -2,75 +2,131 @@
     "master": [
         {
             "id": 1,
-            "textPlace": "Club in downtown Belgrade, where rich people go test text test text one two three",
-            "textDificulty": "You have only 5 euros in your pocket, random text to be rendered test text test text one two three"
+            "textPlace": "Nocni klub",
+            "textDificulty": "Veoma bucno okruzenje, glasna muzika"
         },
         {
             "id": 2,
-            "textPlace": "The Club in downtown Belgrade, where rich people go test text test text one two three",
-            "textDificulty": "Ok, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+            "textPlace": "Ulica u velikom gradu",
+            "textDificulty": "Nigde nikog na ulici sve prazno"
         
         },
         {
             "id": 3,
-            "textPlace": "33 Club in downtown Belgrade, where rich people go test text test text one two three",
-            "textDificulty": "333, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+            "textPlace": "Ulica u selu",
+            "textDificulty": "Kansno je u noc"
         
         },
         {
             "id": 4,
-            "textPlace": "444 Club in downtown Belgrade, where rich people go test text test text one two three",
-            "textDificulty": "4444, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+            "textPlace": "Setaliste pored reke",
+            "textDificulty": "Imas samo 500 dinara u dzepu"
         
         },
         {
             "id": 5,
-            "textPlace": "The 5555 in downtown Belgrade, where rich people go test text test text one two three",
-            "textDificulty": "55555, 2222 You have only 5 euros in your pocket, just testing the MAX of the space random text to be rendered test text test text one two three"
+            "textPlace": "Kafic",
+            "textDificulty": "Catch je sa drugaricama/drugarima ima ih 5 za stolom"
         }
     ],
     "seducer": [
         {
             "id": 1,
-            "textPlace": "Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si osoba koja je izasla iz duge veze"
         },
         {
             "id": 2,
-            "textPlace": "The Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si gluva osoba"
         },
         {
             "id": 3,
-            "textPlace": "33 Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti imas polno prenosive bolesti, Seducer ti se svidja, ali neces da imas sex"
         },
         {
             "id": 4,
-            "textPlace": "444 Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si mutava osoba i imas kompleks oko toga"
         },
         {
             "id": 5,
-            "textPlace": "The 5555 in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si mortus pijana osoba"
+        },
+        {
+            "id": 6,
+            "textPlace": "Ti si osoba koja je izasla iz duge veze"
+        },
+        {
+            "id": 7,
+            "textPlace": "Ti si maloletna osoba i roditelji te izdrzavaju"
+        },
+        {
+            "id": 8,
+            "textPlace": "Nateraj Seducera da ti plati pice a u veoma skupom ste kaficu"
+        },
+        {
+            "id": 9,
+            "textPlace": "Ti si notorni lazov i nepovezano lazes"
+        },
+        {
+            "id": 10,
+            "textPlace": "Ti fan cece, malog knindze, i ostalih seljaka"
+        },
+        {
+            "id": 11,
+            "textPlace": "Ti si pasivno agresivna osoba"
+        },
+        {
+            "id": 12,
+            "textPlace": "Hoces da pitach Catch da ti se pridruzi u trojci"
         }
     ],
     "catch": [
         {
             "id": 1,
-            "textPlace": "Catch Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si osoba koja je izasla iz duge veze"
         },
         {
             "id": 2,
-            "textPlace": "Catch The Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si gluva osoba"
         },
         {
             "id": 3,
-            "textPlace": "Catch 33 Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti imas polno prenosive bolesti, Seducer ti se svidja, ali neces da imas sex"
         },
         {
             "id": 4,
-            "textPlace": "Catch 444 Club in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si mutava osoba i imas kompleks oko toga"
         },
         {
             "id": 5,
-            "textPlace": "Catch The 5555 in downtown Belgrade, where rich people go test text test text one two three"
+            "textPlace": "Ti si mortus pijana osoba"
+        },
+        {
+            "id": 6,
+            "textPlace": "Ti si osoba koja je izasla iz duge veze"
+        },
+        {
+            "id": 7,
+            "textPlace": "Ti si maloletna osoba i roditelji te izdrzavaju"
+        },
+        {
+            "id": 8,
+            "textPlace": "Nateraj Seducera da ti plati pice a u veoma skupom ste kaficu"
+        },
+        {
+            "id": 9,
+            "textPlace": "Ti si notorni lazov i nepovezano lazes"
+        },
+        {
+            "id": 10,
+            "textPlace": "Ti fan cece, malog knindze, i ostalih seljaka"
+        },
+        {
+            "id": 11,
+            "textPlace": "Ti si pasivno agresivna osoba"
+        },
+        {
+            "id": 12,
+            "textPlace": "Jako ti se kenja a glupo ti da prekines Seducera u konverzaciji"
         }
     ]
 }

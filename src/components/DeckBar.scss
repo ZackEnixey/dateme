@@ -26,6 +26,7 @@
 
 .first_card {
     top: -15px;
+    background-color: #EEE;
 }
 
 .first_card:hover {
@@ -35,7 +36,7 @@
 }
 
 .temporary-class {
-    animation: flipAndMove 2s ease-in-out infinite; /* Apply the animation */
+    animation: flipAndMove 1s ease-in-out infinite; /* Apply the animation */
     animation-direction: alternate; /* Reverse the animation on alternate cycles */
     transition: transform 0.5s; /* Smooth transition */
 }

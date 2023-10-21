@@ -3,23 +3,35 @@ import { FC, useState } from 'react';
 interface IDeckCard {
     dragCard(randomNumber: number): void;
     noCardsInDeck: number;
+    currentRandomNumber: any;
 }
 
-const DeckCard: FC<IDeckCard> = ({ dragCard, noCardsInDeck }) => {
-    const [firstCardDownClass, setFirstCardDownClass] = useState('card down');
+const DeckCard: FC<IDeckCard> = ({ dragCard, noCardsInDeck, currentRandomNumber }) => {
+    const [firstCardDownClass, setFirstCardDownClass] = useState('card');
 
     const simulateDragging = () => {
         setFirstCardDownClass('card temporary-class');
-        const randomNum = Math.floor(Math.random() * noCardsInDeck);
-        dragCard(randomNum)
+        generateUniqueRandomNumber();
 
         setTimeout(() => {
             setFirstCardDownClass('card first_card');
-        }, 2000);
+        }, 1000);
     }
 
+    const generateUniqueRandomNumber = () => {
+        let randomNum;
+        do {
+          randomNum = Math.floor(Math.random() * noCardsInDeck);
+        } while (randomNum === currentRandomNumber.current);
+
+        console.log("randomNum: ", randomNum);
+      
+        dragCard(randomNum);
+        currentRandomNumber.current = randomNum;
+      };
+
     const distance: number = -3;
-    const space: number[] = Array.from({ length: 9 }, (_, index) => 30 + distance * index);
+    const space: number[] = Array.from({ length: 10 }, (_, index) => 30 + distance * index);
 
     return (
         <div className="cards_holder">

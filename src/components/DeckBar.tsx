@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useRef, useState } from 'react';
 import DeckCard from './DeckCard';
 import { PLAYER_ROLE } from '../enums/PlayerRoles';
 import { BasicContext } from '../context/BasicContext';
@@ -7,6 +7,7 @@ import { PlayerData, PlayerEntry } from '../interfaces/Interfaces';
 
 const DeckBar = () => {
     const { currentRole, setLocationCardNo, setEnvironmentCardNo, setSeducerCardNo, setCatchNo } = useContext(BasicContext);
+    const currentRandomNumber = useRef<number>(0);
     let localCardData: PlayerData = cardData;
     let cardContentData: PlayerEntry[] | undefined = localCardData.catch;
     if(!cardContentData) return null;
@@ -17,8 +18,8 @@ const DeckBar = () => {
        
         return (
             <div className='bottom-section'>
-                <DeckCard dragCard={setLocationCardNo}  noCardsInDeck={cardContentData.length} />
-                <DeckCard dragCard={setEnvironmentCardNo}  noCardsInDeck={cardContentData.length} />
+                <DeckCard dragCard={setLocationCardNo}  noCardsInDeck={cardContentData.length} currentRandomNumber={currentRandomNumber} />
+                <DeckCard dragCard={setEnvironmentCardNo}  noCardsInDeck={cardContentData.length} currentRandomNumber={currentRandomNumber} />
             </div>
         )
     }
@@ -29,14 +30,14 @@ const DeckBar = () => {
 
         return (
             <div className='bottom-section'>
-                <DeckCard dragCard={setSeducerCardNo}  noCardsInDeck={cardContentData.length} />
+                <DeckCard dragCard={setSeducerCardNo}  noCardsInDeck={cardContentData.length} currentRandomNumber={currentRandomNumber} />
             </div>
         )
     }
 
     return (
         <div className='bottom-section'>
-            <DeckCard dragCard={setCatchNo} noCardsInDeck={cardContentData.length} />
+            <DeckCard dragCard={setCatchNo} noCardsInDeck={cardContentData.length} currentRandomNumber={currentRandomNumber} />
         </div>
     )
 }
