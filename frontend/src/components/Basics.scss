@@ -1,0 +1,149 @@
+body, html {
+    background-color: lightblue;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+.choose_role {
+    background-color: green;
+    min-height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    width: 25vw;
+    height: 80%;
+    border-radius: 1vw;
+    background-color: blueviolet;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        width: 40%;
+        height: 80%;
+        margin: 5px; 
+    }
+
+    &:hover {
+        background-color: lighten(blueviolet, 10%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        background-color: darken(blueviolet, 10%);
+        box-shadow: none;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 5px;
+        background-color: rgba(0, 0, 0, 0.2); 
+        border-radius: 1vw;
+        transition: height 0.3s;
+    }
+
+    &:active::before {
+        height: 0;
+    }
+}
+
+
+.card_front {
+    max-width: 500px;
+    width: 80vw;
+    height: 45%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 4vw;
+    text-align: center;
+    max-height: 500px;
+  
+    p {
+      margin: 0;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+}
+
+.top-section {
+    height: 80px;
+    background-color: #f0f0f0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+$bottom_secion_height: 200px;
+
+.middle-section {
+    position: absolute;
+    top: 80px; 
+    bottom: $bottom_secion_height; 
+    width: 100%;
+    overflow-y: auto; 
+    background-color: #e0e0e0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-section {
+    position: absolute;
+    bottom: 0;
+    height: $bottom_secion_height;
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Media query for non-mobile screens */
+@media screen and (min-width: 768px) {
+    .middle-section {
+        flex-direction: row
+    }
+    .card_front {
+        max-width: 500px;
+        height: 100%;
+        font-size: 3vh;
+    }
+}
+
+.role_selected {
+    background-color: black;
+    color: white;
+}
+
+.role_selected:hover {
+    background-color: gray;
+}
