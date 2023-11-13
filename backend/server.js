@@ -10,7 +10,7 @@ const app = express();
 // DEPLOYMENT
 app.use(cors(
     {
-        origin: [process.env.DEPLOYMENT_URL],
+        origin: ["https://dateme-fzeg.vercel.app/"],
         methods: ["POST", "GET", "DELTE", "PATCH"],
         credentials: true
     }
