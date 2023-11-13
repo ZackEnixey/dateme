@@ -7,6 +7,15 @@ const workoutRouters = require('./routes/workouts');
 // express app
 const app = express();
 
+// DEPLOYMENT
+app.use(cors(
+    {
+        origin: [process.env.DEPLOYMENT_URL],
+        methods: ["POST", "GET", "DELTE", "PATCH"],
+        credentials: true
+    }
+))
+
 // middleware
 app.use(express.json());
 app.use((req, res, next) => {
